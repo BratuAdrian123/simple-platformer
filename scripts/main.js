@@ -1,6 +1,8 @@
 import kaplay from 'kaplay';
 
-//add left - right
+//de facut
+// width - height dynamic
+//add left - right - down Tutorial text next to timer
 //add levles
 //add blocks
 //add background
@@ -11,12 +13,13 @@ const k = kaplay({
   height: 720,
 });
 
-k.loadBean();
+k.loadSprite('Ghostiny', './assets/ghostiny.png');
+
 k.setGravity(1400);
 
 const player = k.add([
-  k.sprite('bean'),
-  k.pos(600, 700),
+  k.sprite('Ghostiny'),
+  k.pos(600, 670),
   k.area(),
   k.body(),
   k.offscreen(),
@@ -30,7 +33,19 @@ k.scene('gameover', () => {
   k.add([k.text('Game Over!'), k.pos(center())]);
 });
 
-player.onKeyPress('space', () => {
+player.onKeyDown('s', () => {
+  player.moveBy(0, 10);
+});
+
+player.onKeyDown('d', () => {
+  player.moveBy(5, 0);
+});
+
+player.onKeyDown('a', () => {
+  player.moveBy(-5, 0);
+});
+
+player.onKeyDown('w', () => {
   if (player.isGrounded()) {
     player.jump();
   }
