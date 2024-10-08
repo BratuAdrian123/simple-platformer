@@ -13,7 +13,7 @@ const k = kaplay({
   height: 720,
 });
 
-k.loadSprite('Ghostiny', './assets/ghostiny.png');
+k.loadSprite('Ghostiny', './dist/assets/ghostiny.png');
 
 k.setGravity(1400);
 
