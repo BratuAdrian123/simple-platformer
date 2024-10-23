@@ -1,4 +1,5 @@
 Unfortunately i have not figured out a way of publishing/hosting the game online so if anyone finds this and wants to give it a go i will leave the steps below to make it work on local machine.
+Also game is unfinished for now, i am currently learning react and don't really have the time to continue the project curently.
 
 - Download all the files in a folder or clone repo in your pc
 - Use VSCode to open the folder
